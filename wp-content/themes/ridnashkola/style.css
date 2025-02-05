@@ -12,5 +12,17 @@ Text Domain: educenter-child
 */
 
 body {
-    background-color: yellow;
+    --wp--preset--color--primary: #0056B9;
+}
+.bottom-header {
+    background-color: #FFD800 ;
+}
+
+.site-title a {
+    color: black;
+    transition: 0.1s ease-in-out;
+}
+
+.site-title a:hover {
+    transform: scale(1.05);
 }
