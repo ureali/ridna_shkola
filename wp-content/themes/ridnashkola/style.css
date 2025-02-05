@@ -1,0 +1,16 @@
+/*
+Theme Name: Ridna Shkola
+Theme URI: http://example.com/educenter-child
+Description: A child theme for the Educenter theme.
+Author: Web Project Team
+Author URI: http://example.com
+Template: educenter
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: educenter-child
+*/
+
+body {
+    background-color: yellow;
+}
