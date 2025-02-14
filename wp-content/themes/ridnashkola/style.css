@@ -26,3 +26,28 @@ body {
 .site-title a:hover {
     transform: scale(1.05);
 }
+
+/* Forgive me Father for I have sinned
+I tried using !important sparingly, but some classes are nested inside spaghetti code.
+TODO: add custom classes in page editor to remove the need for !important
+ */
+.wp-block-cover h2.has-primary-color {
+    color: #FFD800 !important;
+}
+
+.image-zoom-hover {
+    transition: 0.3s ease-in-out;
+}
+
+.image-zoom-hover:hover {
+    transform: scale(1.03);
+}
+
+.wp-block-button__link {
+    border-radius: 10px !important;
+    transition: 0.3s ease-in-out;
+}
+
+.wp-block-button__link:hover {
+    transform: scale(1.03);
+}
