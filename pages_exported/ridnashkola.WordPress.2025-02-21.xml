@@ -17,7 +17,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/6.7.2" created="2025-02-20 18:02" -->
+	<!-- generator="WordPress/6.7.2" created="2025-02-21 19:51" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,8 +29,8 @@
 <channel>
 	<title>Ridna Shkola</title>
 	<link>https://snehretskyi.scweb.ca/wptest</link>
-	<description>Just another WordPress site</description>
-	<pubDate>Thu, 20 Feb 2025 18:02:25 +0000</pubDate>
+	<description></description>
+	<pubDate>Fri, 21 Feb 2025 19:51:31 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>https://snehretskyi.scweb.ca/wptest</wp:base_site_url>
@@ -1161,8 +1161,8 @@
 		<wp:post_id>6</wp:post_id>
 		<wp:post_date><![CDATA[2025-02-07 23:26:47]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-02-07 23:26:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-02-14 22:38:20]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-02-14 22:38:20]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-02-07 23:26:47]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-07 23:26:47]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[home]]></wp:post_name>
@@ -1206,7 +1206,7 @@
 		<description></description>
 		<content:encoded><![CDATA[
 	<!-- wp:pattern {"slug":"educenter/breadcrumb"} /-->
-	
+
     <!-- wp:pattern {"slug":"educenter/course"} /-->
     <!-- wp:spacer {"height":61} -->
 	<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -1219,7 +1219,7 @@
 	<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
 
-    
+
     ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>7</wp:post_id>
@@ -1307,11 +1307,11 @@
 		<description></description>
 		<content:encoded><![CDATA[
 	<!-- wp:pattern {"slug":"educenter/breadcrumb"} /-->
-	
+
 	<!-- wp:spacer {"height":61} -->
 	<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
-	
+
 	<!-- wp:pattern {"slug":"educenter/latest-news"} /-->
 
 	<!-- wp:spacer {"height":61} -->
@@ -1471,8 +1471,8 @@
 		<wp:post_id>10</wp:post_id>
 		<wp:post_date><![CDATA[2025-02-07 23:26:47]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-02-07 23:26:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-02-20 17:17:27]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-02-20 17:17:27]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-02-07 23:26:47]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-07 23:26:47]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[team]]></wp:post_name>
@@ -1542,7 +1542,7 @@
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Leave a message</h2>
+<h2 class="wp-block-heading has-text-align-center">Leave a Message</h2>
 <!-- /wp:heading -->
 
 <!-- wp:shortcode -->
@@ -1550,19 +1550,37 @@
 <!-- /wp:shortcode --></div>
 <!-- /wp:group -->
 
-<!-- wp:paragraph -->
-<p></p>
+<!-- wp:spacer {"height":"var:preset|spacing|60"} -->
+<div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">More Information</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left"} -->
+<p class="has-text-align-left">Working hours: Saturday, 10AM-12PM</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading"></h2>
-<!-- /wp:heading -->]]></content:encoded>
+<!-- wp:paragraph -->
+<p>Email: <a href="mailto:vitaliia_nosatova@wecdsb.on.ca" target="_blank" rel="noreferrer noopener">vitaliia_nosatova@wecdsb.on.ca</a> </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Find us on Facebook: <a href="https://www.facebook.com/share/g/193brdXXK2/">https://www.facebook.com/share/g/193brdXXK2/</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:spacer {"height":"var:preset|spacing|70","style":{"layout":{}}} -->
+<div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>25</wp:post_id>
 		<wp:post_date><![CDATA[2025-02-20 17:11:55]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-02-20 17:11:55]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-02-20 17:56:05]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-02-20 17:56:05]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-02-21 19:50:27]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-21 19:50:27]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[contact-us]]></wp:post_name>
