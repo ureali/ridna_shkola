@@ -17,7 +17,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/6.7.2" created="2025-02-21 19:51" -->
+	<!-- generator="WordPress/6.7.2" created="2025-02-21 20:05" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -30,7 +30,7 @@
 	<title>Ridna Shkola</title>
 	<link>https://snehretskyi.scweb.ca/wptest</link>
 	<description></description>
-	<pubDate>Fri, 21 Feb 2025 19:51:31 +0000</pubDate>
+	<pubDate>Fri, 21 Feb 2025 20:05:16 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>https://snehretskyi.scweb.ca/wptest</wp:base_site_url>
@@ -38,10 +38,82 @@
 
 		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[webcommunicationsproject2025]]></wp:author_login><wp:author_email><![CDATA[w0859305@myscc.ca]]></wp:author_email><wp:author_display_name><![CDATA[webcommunicationsproject2025]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
-				
+		<wp:category>
+		<wp:term_id>1</wp:term_id>
+		<wp:category_nicename><![CDATA[uncategorized]]></wp:category_nicename>
+		<wp:category_parent><![CDATA[]]></wp:category_parent>
+		<wp:cat_name><![CDATA[Uncategorized]]></wp:cat_name>
+	</wp:category>
+				<wp:term>
+		<wp:term_id>2</wp:term_id>
+		<wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[primary-menu]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Primary Menu]]></wp:term_name>
+	</wp:term>
+		<wp:term>
+		<wp:term_id>3</wp:term_id>
+		<wp:term_taxonomy><![CDATA[wp_theme]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[ridnashkola]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[ridnashkola]]></wp:term_name>
+	</wp:term>
+		<wp:term>
+		<wp:term_id>1</wp:term_id>
+		<wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[uncategorized]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Uncategorized]]></wp:term_name>
+	</wp:term>
+			<wp:term><wp:term_id>2</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[primary-menu]]></wp:term_slug><wp:term_name><![CDATA[Primary Menu]]></wp:term_name>
+</wp:term>
+
 	<generator>https://wordpress.org/?v=6.7.2</generator>
 
 		<item>
+		<title><![CDATA[Hello world!]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/2025/02/07/hello-world/</link>
+		<pubDate>Fri, 07 Feb 2025 23:25:38 +0000</pubDate>
+		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/?p=1</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-07 23:25:38]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-07 23:25:38]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-07 23:25:38]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-07 23:25:38]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[hello-world]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+						<wp:comment>
+			<wp:comment_id>1</wp:comment_id>
+			<wp:comment_author><![CDATA[A WordPress Commenter]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[wapuu@wordpress.example]]></wp:comment_author_email>
+			<wp:comment_author_url>https://wordpress.org/</wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2025-02-07 23:25:38]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2025-02-07 23:25:38]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Hi, this is a comment.
+To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.
+Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					</item>
+					<item>
 		<title><![CDATA[Sample Page]]></title>
 		<link>https://snehretskyi.scweb.ca/wptest/sample-page/</link>
 		<pubDate>Fri, 07 Feb 2025 23:25:38 +0000</pubDate>
@@ -195,6 +267,30 @@
 		<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
+					<item>
+		<title><![CDATA[Navigation]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/2025/02/07/navigation/</link>
+		<pubDate>Fri, 07 Feb 2025 23:25:39 +0000</pubDate>
+		<dc:creator><![CDATA[]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/2025/02/07/navigation/</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:page-list /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>4</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-07 23:25:39]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-07 23:25:39]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-07 23:25:39]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-07 23:25:39]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[navigation]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[wp_navigation]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														</item>
 					<item>
 		<title><![CDATA[Home]]></title>
 		<link>https://snehretskyi.scweb.ca/wptest/</link>
@@ -1299,33 +1395,34 @@
 		</wp:postmeta>
 							</item>
 					<item>
-		<title><![CDATA[Blog]]></title>
-		<link>https://snehretskyi.scweb.ca/wptest/blog/</link>
+		<title><![CDATA[News]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/news/</link>
 		<pubDate>Fri, 07 Feb 2025 23:26:47 +0000</pubDate>
 		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
 		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/?page_id=9</guid>
 		<description></description>
-		<content:encoded><![CDATA[
-	<!-- wp:pattern {"slug":"educenter/breadcrumb"} /-->
+		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://snehretskyi.scweb.ca/wptest/wp-content/themes/educenter/assets/images/default/breadcrumb.jpg","id":174,"dimRatio":50,"isDark":false,"metadata":{"categories":["educenter"],"patternName":"educenter/breadcrumb","name":"Breadcrumb"},"align":"full","className":"breadcrumb"} -->
+<div class="wp-block-cover alignfull is-light breadcrumb"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-174" alt="" src="https://snehretskyi.scweb.ca/wptest/wp-content/themes/educenter/assets/images/default/breadcrumb.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:post-title {"textAlign":"center","textColor":"wwhite"} /--></div></div>
+<!-- /wp:cover -->
 
-	<!-- wp:spacer {"height":61} -->
-	<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
+<!-- wp:spacer {"height":"61px"} -->
+<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
-	<!-- wp:pattern {"slug":"educenter/latest-news"} /-->
+<!-- wp:pattern {"slug":"educenter/latest-news"} /-->
 
-	<!-- wp:spacer {"height":61} -->
-	<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->]]></content:encoded>
+<!-- wp:spacer {"height":"61px"} -->
+<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>9</wp:post_id>
 		<wp:post_date><![CDATA[2025-02-07 23:26:47]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-02-07 23:26:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-02-07 23:26:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-02-07 23:26:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-02-21 19:58:11]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-21 19:58:11]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[blog]]></wp:post_name>
+		<wp:post_name><![CDATA[news]]></wp:post_name>
 		<wp:status><![CDATA[publish]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
@@ -1339,6 +1436,14 @@
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_customize_changeset_uuid]]></wp:meta_key>
 		<wp:meta_value><![CDATA[01237fae-11c6-42ae-a90d-288eddf67a21]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[educenter_page_layouts]]></wp:meta_key>
+		<wp:meta_value><![CDATA[nosidebar]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -1508,6 +1613,31 @@
 		</wp:postmeta>
 							</item>
 					<item>
+		<title><![CDATA[Custom Styles]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/2025/02/14/wp-global-styles-ridnashkola/</link>
+		<pubDate>Fri, 14 Feb 2025 18:04:01 +0000</pubDate>
+		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/2025/02/14/wp-global-styles-ridnashkola/</guid>
+		<description></description>
+		<content:encoded><![CDATA[{"version": 3, "isGlobalStylesUserThemeJSON": true }]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>21</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-14 18:04:01]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-14 18:04:01]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-14 18:04:01]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-14 18:04:01]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[wp-global-styles-ridnashkola]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[wp_global_styles]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="wp_theme" nicename="ridnashkola"><![CDATA[ridnashkola]]></category>
+						</item>
+					<item>
 		<title><![CDATA[Contact Us]]></title>
 		<link>https://snehretskyi.scweb.ca/wptest/contact-us/</link>
 		<pubDate>Thu, 20 Feb 2025 17:11:55 +0000</pubDate>
@@ -1579,8 +1709,8 @@
 		<wp:post_id>25</wp:post_id>
 		<wp:post_date><![CDATA[2025-02-20 17:11:55]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-02-20 17:11:55]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-02-21 19:50:27]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-02-21 19:50:27]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-02-21 20:00:59]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-21 20:00:59]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[contact-us]]></wp:post_name>
@@ -1600,7 +1730,211 @@
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-		<wp:meta_value><![CDATA[full-width.php]]></wp:meta_value>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/2025/02/20/64/</link>
+		<pubDate>Thu, 20 Feb 2025 22:16:45 +0000</pubDate>
+		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/2025/02/20/64/</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>64</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-20 22:16:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-20 22:16:45]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-20 22:16:45]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-20 22:16:45]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[64]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+						<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+		<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+		<wp:meta_value><![CDATA[9]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/2025/02/20/65/</link>
+		<pubDate>Thu, 20 Feb 2025 22:16:45 +0000</pubDate>
+		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/2025/02/20/65/</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>65</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-20 22:16:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-20 22:16:45]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-20 22:16:45]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-20 22:16:45]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[65]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+						<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+		<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+		<wp:meta_value><![CDATA[25]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/cropped-461846353_8050985118344800_922073125297712568_n-jpg/</link>
+		<pubDate>Fri, 21 Feb 2025 20:03:33 +0000</pubDate>
+		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/wp-content/uploads/2025/02/cropped-461846353_8050985118344800_922073125297712568_n.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[https://snehretskyi.scweb.ca/wptest/wp-content/uploads/2025/02/cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>81</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-21 20:03:33]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-21 20:03:33]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-21 20:03:33]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-21 20:03:33]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[cropped-461846353_8050985118344800_922073125297712568_n-jpg]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://snehretskyi.scweb.ca/wptest/wp-content/uploads/2025/02/cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2025/02/cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_context]]></wp:meta_key>
+		<wp:meta_value><![CDATA[custom-header]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:7:{s:5:"width";i:1350;s:6:"height";i:581;s:4:"file";s:67:"2025/02/cropped-461846353_8050985118344800_922073125297712568_n.jpg";s:8:"filesize";i:96661;s:5:"sizes";a:8:{s:6:"medium";a:5:{s:4:"file";s:67:"cropped-461846353_8050985118344800_922073125297712568_n-300x129.jpg";s:5:"width";i:300;s:6:"height";i:129;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:12517;}s:5:"large";a:5:{s:4:"file";s:68:"cropped-461846353_8050985118344800_922073125297712568_n-1024x441.jpg";s:5:"width";i:1024;s:6:"height";i:441;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:62001;}s:9:"thumbnail";a:5:{s:4:"file";s:67:"cropped-461846353_8050985118344800_922073125297712568_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:7297;}s:12:"medium_large";a:5:{s:4:"file";s:67:"cropped-461846353_8050985118344800_922073125297712568_n-768x331.jpg";s:5:"width";i:768;s:6:"height";i:331;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:41118;}s:16:"educenter-slider";a:5:{s:4:"file";s:68:"cropped-461846353_8050985118344800_922073125297712568_n-1320x581.jpg";s:5:"width";i:1320;s:6:"height";i:581;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:94520;}s:15:"educenter-large";a:5:{s:4:"file";s:67:"cropped-461846353_8050985118344800_922073125297712568_n-840x450.jpg";s:5:"width";i:840;s:6:"height";i:450;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:45381;}s:17:"educenter-gallery";a:5:{s:4:"file";s:67:"cropped-461846353_8050985118344800_922073125297712568_n-400x290.jpg";s:5:"width";i:400;s:6:"height";i:290;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:18270;}s:14:"educenter-team";a:5:{s:4:"file";s:67:"cropped-461846353_8050985118344800_922073125297712568_n-400x510.jpg";s:5:"width";i:400;s:6:"height";i:510;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:29294;}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}s:17:"attachment_parent";i:80;}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_custom_header_last_used_ridnashkola]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1740168215]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_is_custom_header]]></wp:meta_key>
+		<wp:meta_value><![CDATA[ridnashkola]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[cropped-cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></title>
+		<link>https://snehretskyi.scweb.ca/wptest/cropped-cropped-461846353_8050985118344800_922073125297712568_n-jpg/</link>
+		<pubDate>Fri, 21 Feb 2025 20:04:42 +0000</pubDate>
+		<dc:creator><![CDATA[webcommunicationsproject2025]]></dc:creator>
+		<guid isPermaLink="false">https://snehretskyi.scweb.ca/wptest/wp-content/uploads/2025/02/cropped-cropped-461846353_8050985118344800_922073125297712568_n.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[https://snehretskyi.scweb.ca/wptest/wp-content/uploads/2025/02/cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>83</wp:post_id>
+		<wp:post_date><![CDATA[2025-02-21 20:04:42]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-02-21 20:04:42]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-02-21 20:04:42]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-02-21 20:04:42]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[cropped-cropped-461846353_8050985118344800_922073125297712568_n-jpg]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://snehretskyi.scweb.ca/wptest/wp-content/uploads/2025/02/cropped-cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2025/02/cropped-cropped-461846353_8050985118344800_922073125297712568_n.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_context]]></wp:meta_key>
+		<wp:meta_value><![CDATA[custom-header]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:7:{s:5:"width";i:1350;s:6:"height";i:414;s:4:"file";s:75:"2025/02/cropped-cropped-461846353_8050985118344800_922073125297712568_n.jpg";s:8:"filesize";i:76613;s:5:"sizes";a:8:{s:6:"medium";a:5:{s:4:"file";s:74:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-300x92.jpg";s:5:"width";i:300;s:6:"height";i:92;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:10068;}s:5:"large";a:5:{s:4:"file";s:76:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-1024x314.jpg";s:5:"width";i:1024;s:6:"height";i:314;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:49079;}s:9:"thumbnail";a:5:{s:4:"file";s:75:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:5669;}s:12:"medium_large";a:5:{s:4:"file";s:75:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-768x236.jpg";s:5:"width";i:768;s:6:"height";i:236;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:32887;}s:16:"educenter-slider";a:5:{s:4:"file";s:76:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-1320x414.jpg";s:5:"width";i:1320;s:6:"height";i:414;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:74992;}s:15:"educenter-large";a:5:{s:4:"file";s:75:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-840x414.jpg";s:5:"width";i:840;s:6:"height";i:414;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:36894;}s:17:"educenter-gallery";a:5:{s:4:"file";s:75:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-400x290.jpg";s:5:"width";i:400;s:6:"height";i:290;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:16767;}s:14:"educenter-team";a:5:{s:4:"file";s:75:"cropped-cropped-461846353_8050985118344800_922073125297712568_n-400x414.jpg";s:5:"width";i:400;s:6:"height";i:414;s:9:"mime-type";s:10:"image/jpeg";s:8:"filesize";i:20207;}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}s:17:"attachment_parent";i:81;}]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_custom_header_last_used_ridnashkola]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1740168287]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_is_custom_header]]></wp:meta_key>
+		<wp:meta_value><![CDATA[ridnashkola]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 				</channel>
