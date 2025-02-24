@@ -62,7 +62,35 @@ if ( ! function_exists( 'educenter_main_header' ) ) {
         <?php
     }
 }
+
+
 add_action( 'educenter_header', 'educenter_main_header', 20 );
 
+/**
+ * Footer
+ */
+
+if ( ! function_exists( 'educenter_button_footer_before' ) ) {
+
+    function educenter_button_footer_before(){ ?>
+
+        <div class="bottom-footer clearfix">
+
+            <div class="container">
+
+                <div class="footer-bottom-left">
+
+                    <p><?php  echo esc_html($content = esc_html__('Copyright  &copy; ','educenter') . date( 'Y' ) . ' - ' . get_bloginfo( 'name' )); ?></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <?php
+    }
+}
+add_action( 'educenter_button_footer', 'educenter_button_footer_before', 15 );
 ?>
 
