@@ -40,6 +40,7 @@ class Simple_Contact_Form {
         $name = sanitize_text_field($_POST['name']);
         $email = sanitize_email($_POST['email']);
         $message = sanitize_textarea_field($_POST['message']);
+        $appointment = isset($_POST['appointment']) ? sanitize_text_field($_POST['appointment']) : '';
 
         if (empty($name) || empty($email) || empty($message)) {
             wp_die('Please fill in all fields');
@@ -51,20 +52,21 @@ class Simple_Contact_Form {
         $body = "Name: $name\n";
         $body .= "Email: $email\n\n";
         $body .= "Message:\n$message";
+        $body .= "\nPreferred Appointment Date: $appointment\n";
 
         $headers = array('Content-Type: text/plain; charset=UTF-8');
 
         wp_mail($to, $subject, $body, $headers);
 
         if (get_option('simple_contact_store_submissions', '1')) {
-            $this->store_submission($name, $email, $message);
+            $this->store_submission($name, $email, $message,  $appointment);
         }
 
         wp_redirect(add_query_arg('contact_submitted', 'true', wp_get_referer()));
         exit;
     }
 
-    public function store_submission($name, $email, $message) {
+    public function store_submission($name, $email, $message, $appointment=null) {
         global $wpdb;
         $table_name = $wpdb->prefix . 'simple_contact_submissions';
 
@@ -74,6 +76,7 @@ class Simple_Contact_Form {
                 'name' => $name,
                 'email' => $email,
                 'message' => $message,
+                'appointment' => $appointment,
                 'date' => current_time('mysql')
             ),
             array('%s', '%s', '%s', '%s')
@@ -108,6 +111,12 @@ class Simple_Contact_Form {
                     <label for="message"><?php echo esc_html(get_option('simple_contact_message_label', 'Message:')); ?></label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
+
+                <div class="form-group">
+                    <label for="appointment"><?php echo esc_html(get_option('simple_contact_appointment_label', 'Preferred Appointment Date (Optional):')); ?></label>
+                    <input type="datetime-local" id="appointment" name="appointment">
+                </div>
+
 
                 <div class="submit-button-container">
                     <button type="submit" name="simple_contact_submit" class="submit-button has-primary-background-color has-background wp-element-button">
@@ -201,13 +210,14 @@ class Simple_Contact_Form {
         $charset_collate = $wpdb->get_charset_collate();
 
         $sql = "CREATE TABLE IF NOT EXISTS $table_name (
-            id mediumint(9) NOT NULL AUTO_INCREMENT,
-            name varchar(100) NOT NULL,
-            email varchar(100) NOT NULL,
-            message text NOT NULL,
-            date datetime DEFAULT CURRENT_TIMESTAMP,
-            PRIMARY KEY  (id)
-        ) $charset_collate;";
+    id mediumint(9) NOT NULL AUTO_INCREMENT,
+    name varchar(100) NOT NULL,
+    email varchar(100) NOT NULL,
+    message text NOT NULL,
+    appointment datetime DEFAULT NULL,
+    date datetime DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY  (id)
+) $charset_collate;";
 
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql);
