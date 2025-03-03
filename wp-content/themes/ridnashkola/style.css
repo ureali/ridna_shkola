@@ -52,3 +52,32 @@ TODO: add custom classes in page editor to remove the need for !important
     transform: scale(1.03);
 }
 
+.ridna-heading {
+    background-color: #FFD800;
+    padding: var(--wp--preset--spacing--40);
+    width: 100%;
+}
+
+.ridna-stack {
+    gap: 0;
+}
+
+.footer-menu-wrapper {
+    background-color: #222;
+}
+
+#footer-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: var(--wp--preset--spacing--40);
+}
+
+#footer-menu a {
+    color: #d9d3d3;
+}
+
+#footer-menu a:hover {
+    color: #fff;
+}

@@ -92,5 +92,13 @@ if ( ! function_exists( 'educenter_button_footer_before' ) ) {
     }
 }
 add_action( 'educenter_button_footer', 'educenter_button_footer_before', 15 );
+
+function register_footer_menu() {
+    register_nav_menus( array(
+        'footer-menu' => esc_html__( 'Footer Menu (Ridna Shkola, Please Use This)', 'educenter' ),
+    ) );
+}
+add_action( 'after_setup_theme', 'register_footer_menu' );
+
 ?>
 
