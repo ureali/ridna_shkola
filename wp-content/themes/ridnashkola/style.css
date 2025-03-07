@@ -11,9 +11,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: educenter-child
 */
 
+/*
+    1. body
+ */
 body {
     --wp--preset--color--primary: #0056B9;
 }
+
+/*
+    2. header
+ */
 .bottom-header {
     background-color: #FFD800 ;
 }
@@ -24,9 +31,54 @@ body {
 }
 
 .site-title a:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
+.main-menu li a {
+    position: relative;
+}
+
+.header-middle-inner .box-header-nav .main-menu > .menu-item:hover > a{
+    background-color: transparent !important;
+}
+
+.main-menu li a:after {
+    content: "";
+    background-color: var(--wp--preset--color--primary);
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: -1;
+}
+
+.main-menu li a:hover:after{ width: 100%; }
+
+/*
+Canceling animation for current page
+ */
+.header-middle-inner .box-header-nav .main-menu > .menu-item.current-menu-item > a:after {
+    width: 0;
+}
+.header-middle-inner .box-header-nav .main-menu > .menu-item.current-menu-item .header-middle-inner .box-header-nav .main-menu > .menu-item:hover{
+    background-color: var(--wp--preset--color--primary);
+}
+
+.header-middle-inner .box-header-nav .main-menu > .menu-item.current-menu-item > a {
+    background-color: var(--wp--preset--color--primary) !important;
+}
+
+
+
+.main-menu li:hover {
+
+}
+/*
+    3. main
+ */
 /* Forgive me Father for I have sinned
 I tried using !important sparingly, but some classes are nested inside spaghetti code.
 TODO: add custom classes in page editor to remove the need for !important
@@ -53,7 +105,7 @@ TODO: add custom classes in page editor to remove the need for !important
 }
 
 .ridna-heading {
-    background-color: #FFD800;
+    border-bottom: 5px solid #FFD800;
     padding: var(--wp--preset--spacing--40);
     width: 100%;
 }
@@ -62,6 +114,9 @@ TODO: add custom classes in page editor to remove the need for !important
     gap: 0;
 }
 
+/*
+ 4. footer
+ */
 .footer-menu-wrapper {
     background-color: #222;
 }
@@ -81,3 +136,4 @@ TODO: add custom classes in page editor to remove the need for !important
 #footer-menu a:hover {
     color: #fff;
 }
+
