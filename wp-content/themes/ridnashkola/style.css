@@ -11,20 +11,57 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: educenter-child
 */
 
+/* typography */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.75em;
+}
+
+p {
+    margin-bottom: 1.25em;
+    color: #222222;
+}
+
 /*
     1. body
  */
 body {
-    --wp--preset--color--primary: #0056B9;
+    --wp--preset--color--primary: #0065d8;
+}
+
+a {
+    color: #0056b3;
+}
+
+a:hover {
+    color: #003366;
 }
 
 /*
-    2. header
+2. header
  */
 .bottom-header {
     background-color: #FFD800 ;
 }
-
 .site-title a {
     color: black;
     transition: 0.1s ease-in-out;
@@ -76,6 +113,75 @@ Canceling animation for current page
 .main-menu li:hover {
 
 }
+
+.top-language-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 15px;
+    margin: 0;
+}
+
+.top-language-switcher a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 5px;
+    padding: 3px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: #333;
+}
+
+.top-language-switcher a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.top-language-switcher a.active {
+    font-weight: bold;
+    background-color: rgba(255, 216, 0, 0.2);
+    border-bottom: 2px solid #FFD800;
+}
+
+/* Styling for flag emojis */
+.top-language-switcher a span.flag {
+    margin-right: 5px;
+    font-size: 16px; /* Make flags slightly larger */
+    line-height: 1;
+    position: relative;
+    top: 1px;
+}
+
+/* Add a subtle separator between language options */
+.top-language-switcher a:not(:last-child):after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .top-language-switcher {
+        justify-content: center;
+        padding: 5px 10px;
+    }
+
+    .top-language-switcher a {
+        padding: 2px 5px;
+        font-size: 13px;
+    }
+
+    .top-language-switcher a span.flag {
+        margin-right: 3px;
+    }
+}
+
 /*
     3. main
  */
@@ -105,7 +211,7 @@ TODO: add custom classes in page editor to remove the need for !important
 }
 
 .ridna-heading {
-    border-bottom: 5px solid #FFD800;
+    border-bottom: 5px solid var(--wp--preset--color--primary);
     padding: var(--wp--preset--spacing--40);
     width: 100%;
 }
@@ -114,9 +220,36 @@ TODO: add custom classes in page editor to remove the need for !important
     gap: 0;
 }
 
+.contact-block {
+    border: 3px #FFD800 solid;
+    min-height: 100%;
+    flex: 1;
+    width: 30%;
+    padding: var(--wp--preset--spacing--40);
+}
+
+@media screen and (max-width: 1028px){
+    .contact-block {
+        width: 100%;
+    }
+}
+
+.contact-icon  {
+    min-width: 100%;
+    color: var(--wp--preset--color--primary);
+}
 /*
  4. footer
  */
+
+footer {
+    color: #fff;
+}
+
+footer p {
+    color: #fff;
+}
+
 .footer-menu-wrapper {
     background-color: #222;
 }
@@ -136,4 +269,3 @@ TODO: add custom classes in page editor to remove the need for !important
 #footer-menu a:hover {
     color: #fff;
 }
-

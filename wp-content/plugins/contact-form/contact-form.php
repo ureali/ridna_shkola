@@ -43,23 +43,23 @@ class Simple_Contact_Form {
         $appointment = isset($_POST['appointment']) ? sanitize_text_field($_POST['appointment']) : '';
 
         if (empty($name) || empty($email) || empty($message)) {
-            wp_die('Please fill in all fields');
+            wp_die($this->translate_to_locale('Please fill in all fields', 'Будь ласка, заповніть усі поля'));
         }
 
         $to = get_option('simple_contact_recipient_email', get_option('admin_email'));
         $subject = get_option('simple_contact_email_subject', 'New Contact Form Submission');
 
-        $body = "Name: $name\n";
-        $body .= "Email: $email\n\n";
-        $body .= "Message:\n$message";
-        $body .= "\nPreferred Appointment Date: $appointment\n";
+        $body = $this->translate_to_locale("Name", "Ім'я") . ": $name\n";
+        $body .= $this->translate_to_locale("Email", "Електронна пошта") . ": $email\n\n";
+        $body .= $this->translate_to_locale("Message", "Повідомлення") . ":\n$message";
+        $body .= "\n" . $this->translate_to_locale("Preferred Appointment Date", "Бажана дата зустрічі") . ": $appointment\n";
 
         $headers = array('Content-Type: text/plain; charset=UTF-8');
 
         wp_mail($to, $subject, $body, $headers);
 
         if (get_option('simple_contact_store_submissions', '1')) {
-            $this->store_submission($name, $email, $message,  $appointment);
+            $this->store_submission($name, $email, $message, $appointment);
         }
 
         wp_redirect(add_query_arg('contact_submitted', 'true', wp_get_referer()));
@@ -88,7 +88,10 @@ class Simple_Contact_Form {
 
         if (isset($_GET['contact_submitted'])) {
             echo '<div class="success-message">' .
-                esc_html(get_option('simple_contact_success_message', 'Thank you for your message. We\'ll be in touch soon!')) .
+                esc_html($this->translate_to_locale(
+                    get_option('simple_contact_success_message', 'Thank you for your message. We\'ll be in touch soon!'),
+                    'Дякуємо за ваше повідомлення. Ми скоро зв\'яжемось з вами!'
+                )) .
                 '</div>';
         }
 
@@ -97,30 +100,47 @@ class Simple_Contact_Form {
             <form method="post">
                 <?php wp_nonce_field('simple_contact_form', 'contact_nonce'); ?>
 
-                <div class="form-group">
-                    <label for="name"><?php echo esc_html(get_option('simple_contact_name_label', 'Name:')); ?></label>
-                    <input type="text" id="name" name="name" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name"><?php echo esc_html($this->translate_to_locale(
+                                get_option('simple_contact_name_label', 'Name:'),
+                                'Ім\'я:'
+                            )); ?></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><?php echo esc_html($this->translate_to_locale(
+                                get_option('simple_contact_email_label', 'Email:'),
+                                'Електронна пошта:'
+                            )); ?></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email"><?php echo esc_html(get_option('simple_contact_email_label', 'Email:')); ?></label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message"><?php echo esc_html(get_option('simple_contact_message_label', 'Message:')); ?></label>
+                    <label for="message"><?php echo esc_html($this->translate_to_locale(
+                            get_option('simple_contact_message_label', 'Message:'),
+                            'Повідомлення:'
+                        )); ?></label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="appointment"><?php echo esc_html(get_option('simple_contact_appointment_label', 'Preferred Appointment Date (Optional):')); ?></label>
+                    <label for="appointment"><?php echo esc_html($this->translate_to_locale(
+                            get_option('simple_contact_appointment_label', 'Preferred Appointment Date (Optional):'),
+                            'Бажана дата зустрічі (необов\'язково):'
+                        )); ?></label>
                     <input type="datetime-local" id="appointment" name="appointment">
                 </div>
 
 
                 <div class="submit-button-container">
                     <button type="submit" name="simple_contact_submit" class="submit-button has-primary-background-color has-background wp-element-button">
-                        <?php echo esc_html(get_option('simple_contact_submit_text', 'Send Message')); ?>
+                        <?php echo esc_html($this->translate_to_locale(
+                            get_option('simple_contact_submit_text', 'Send Message'),
+                            'Надіслати повідомлення'
+                        )); ?>
                     </button>
                 </div>
 
@@ -156,7 +176,7 @@ class Simple_Contact_Form {
     public function render_admin_page() {
         ?>
         <div class="wrap">
-            <h2>Simple Contact Form Settings</h2>
+            <h2><?php echo $this->translate_to_locale('Simple Contact Form Settings', 'Налаштування простої контактної форми'); ?></h2>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('simple_contact_options');
@@ -165,21 +185,21 @@ class Simple_Contact_Form {
 
                 <table class="form-table">
                     <tr>
-                        <th scope="row">Recipient Email</th>
+                        <th scope="row"><?php echo $this->translate_to_locale('Recipient Email', 'Електронна пошта отримувача'); ?></th>
                         <td>
                             <input type="email" name="simple_contact_recipient_email"
                                    value="<?php echo esc_attr(get_option('simple_contact_recipient_email', get_option('admin_email'))); ?>">
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">Email Subject</th>
+                        <th scope="row"><?php echo $this->translate_to_locale('Email Subject', 'Тема листа'); ?></th>
                         <td>
                             <input type="text" name="simple_contact_email_subject"
                                    value="<?php echo esc_attr(get_option('simple_contact_email_subject', 'New Contact Form Submission')); ?>">
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">Success Message</th>
+                        <th scope="row"><?php echo $this->translate_to_locale('Success Message', 'Повідомлення про успіх'); ?></th>
                         <td>
                             <textarea name="simple_contact_success_message"><?php
                                 echo esc_textarea(get_option('simple_contact_success_message', 'Thank you for your message. We\'ll be in touch soon!'));
@@ -187,21 +207,20 @@ class Simple_Contact_Form {
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">Store Submissions</th>
+                        <th scope="row"><?php echo $this->translate_to_locale('Store Submissions', 'Зберігати подання'); ?></th>
                         <td>
                             <input type="checkbox" name="simple_contact_store_submissions" value="1"
                                 <?php checked(1, get_option('simple_contact_store_submissions', '1')); ?>>
-                            Store form submissions in database
+                            <?php echo $this->translate_to_locale('Store form submissions in database', 'Зберігати подання форми в базі даних'); ?>
                         </td>
                     </tr>
                 </table>
 
-                <?php submit_button(); ?>
+                <?php submit_button($this->translate_to_locale('Save Changes', 'Зберегти зміни')); ?>
             </form>
         </div>
         <?php
     }
-
 
     public static function activate() {
         global $wpdb;
@@ -232,8 +251,15 @@ class Simple_Contact_Form {
         );
     }
 
+    // Helper function to check the language and translate if needed
+    private function translate_to_locale($english_text, $ukrainian_text) {
+        $current_locale = get_locale();
+        if ($current_locale === 'ua' || $current_locale === 'uk' || $current_locale === 'uk_UA') {
+            return $ukrainian_text;
+        }
+        return $english_text;
+    }
 }
-
 
 $simple_contact_form = new Simple_Contact_Form();
 
