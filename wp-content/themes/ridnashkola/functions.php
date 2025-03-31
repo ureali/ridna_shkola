@@ -100,5 +100,27 @@ function register_footer_menu() {
 }
 add_action( 'after_setup_theme', 'register_footer_menu' );
 
+
+/**
+ * Add Wordwall as an oEmbed provider.
+ */
+function my_theme_add_wordwall_oembed_provider()
+{
+    wp_oembed_add_provider(
+        '#https?://(www\.)?wordwall\.net/resource/.*#i',
+        'https://wordwall.net/api/oembed',
+        true
+    );
+
+    // Optional: Register provider for play URLs if needed
+    wp_oembed_add_provider(
+        '#https?://(www\.)?wordwall\.net/play/.*#i',
+        'https://wordwall.net/api/oembed',
+        true
+    );
+}
+
+add_action('init', 'my_theme_add_wordwall_oembed_provider');
+
 ?>
 

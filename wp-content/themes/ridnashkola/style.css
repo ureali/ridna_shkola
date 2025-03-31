@@ -21,7 +21,7 @@ textarea {
     color: #333;
     font-family: 'Lato', sans-serif;
     font-size: 1.0625rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 h1,
@@ -46,8 +46,19 @@ p {
  */
 body {
     --wp--preset--color--primary: #0065d8;
+    min-height: 100vh;
 }
 
+#page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#content {
+    flex: 1;
+}
 a {
     color: #0056b3;
 }
@@ -62,6 +73,7 @@ a:hover {
 .bottom-header {
     background-color: #FFD800 ;
 }
+
 .site-title a {
     color: black;
     transition: 0.1s ease-in-out;
@@ -79,12 +91,16 @@ a:hover {
     background-color: transparent !important;
 }
 
+header .header-middle-inner .box-header-nav .main-menu > .menu-item:not(.current-menu-item) > a:hover {
+    color: var(--wp--preset-color--primary) !important;
+}
+
 .main-menu li a:after {
     content: "";
     background-color: var(--wp--preset--color--primary);
-    height: 100%;
+    height: 3px;
     left: 0;
-    top: 0;
+    bottom: 0.8rem;
     width: 0px;
     position: absolute;
     transition: all 0.3s ease 0s;
@@ -110,74 +126,66 @@ Canceling animation for current page
 
 
 
-.main-menu li:hover {
-
+.main-menu li {
+    padding: 0 0.2rem;
 }
 
-.top-language-switcher {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 8px 15px;
-    margin: 0;
+.main-menu > li:nth-last-child(-n+2) {
+    margin-left: var(--wp--preset--spacing--40);
+    padding-left: var(--wp--preset--spacing--40);
 }
 
-.top-language-switcher a {
+.main-menu > li:last-child {
+    margin-left: 0;
+    padding-left: revert;
+}
+
+.main-menu > li:nth-last-child(-n+2) > a {
     display: inline-flex;
     align-items: center;
-    margin: 0 5px;
-    padding: 3px 8px;
-    text-decoration: none;
+    padding: 5px 8px;
+    margin: 0 3px;
     border-radius: 4px;
     transition: all 0.2s ease;
     font-size: 14px;
+}
+
+.main-menu > li:nth-last-child(-n+2) > a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
     color: #333;
 }
 
-.top-language-switcher a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    transform: translateY(-2px);
+.main-menu > li:nth-last-child(-n+2) > a:after {
+    display: none;
 }
 
-.top-language-switcher a.active {
+.main-menu > li.current-menu-item:nth-last-child(-n+2) > a {
     font-weight: bold;
-    background-color: rgba(255, 216, 0, 0.2);
+    background-color: rgba(255, 216, 0, 0.2) !important;
     border-bottom: 2px solid #FFD800;
 }
 
-/* Styling for flag emojis */
-.top-language-switcher a span.flag {
+.main-menu > li:nth-last-child(-n+2) > a {
     margin-right: 5px;
-    font-size: 16px; /* Make flags slightly larger */
     line-height: 1;
-    position: relative;
-    top: 1px;
 }
 
-/* Add a subtle separator between language options */
-.top-language-switcher a:not(:last-child):after {
-    content: "";
-    position: absolute;
-    right: -5px;
-    top: 25%;
-    height: 50%;
-    width: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+.main-menu > li:nth-last-child(-n+2) > a > img {
+    transform: scale(1.2);
 }
 
-/* Responsive styles */
 @media screen and (max-width: 768px) {
-    .top-language-switcher {
-        justify-content: center;
-        padding: 5px 10px;
+    .main-menu > li:nth-last-child(-n+2) {
+        margin-left: 0;
     }
 
-    .top-language-switcher a {
+    .main-menu > li:nth-last-child(-n+2) > a {
         padding: 2px 5px;
         font-size: 13px;
     }
 
-    .top-language-switcher a span.flag {
+    .main-menu > li:nth-last-child(-n+2) > a span {
         margin-right: 3px;
     }
 }
@@ -238,6 +246,10 @@ TODO: add custom classes in page editor to remove the need for !important
     min-width: 100%;
     color: var(--wp--preset--color--primary);
 }
+
+.quizzes-grid {
+    max-width: 65%;
+}
 /*
  4. footer
  */
@@ -269,3 +281,153 @@ footer p {
 #footer-menu a:hover {
     color: #fff;
 }
+
+/* Quiz styles */
+.wordwall-embed-container {
+    margin: var(--wp--preset--spacing--60) auto;
+    width: fit-content;
+}
+
+
+.wordwall-error,
+.wordwall-notice {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff8e1;
+    border: 1px solid #ffe5a6;
+    color: #5f4e28;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* DEFAULT OVERRIDES */
+.wp-container-core-group-is-layout-1 > * + *,
+.wp-container-core-group-is-layout-19 > * + *,
+.wp-container-core-group-is-layout-37 > * + *,
+.wp-container-core-group-is-layout-55 > * + *,
+.wp-container-core-group-is-layout-73 > * + *,
+.wp-container-core-group-is-layout-91 > * + *,
+.wp-container-core-group-is-layout-109 > * + *,
+.wp-container-core-group-is-layout-127 > * + * {
+    margin-block-start: var(--wp--preset--spacing--40, 1.5rem); /* Use theme variable, fallback to 1.5rem (approx 24px) */
+}
+
+.wp-container-core-group-is-layout-2 > * + *,
+.wp-container-core-group-is-layout-3 > * + *,
+.wp-container-core-group-is-layout-6 > * + *,
+.wp-container-core-group-is-layout-20 > * + *,
+.wp-container-core-group-is-layout-21 > * + *,
+.wp-container-core-group-is-layout-24 > * + *,
+.wp-container-core-group-is-layout-38 > * + *,
+.wp-container-core-group-is-layout-39 > * + *,
+.wp-container-core-group-is-layout-42 > * + *,
+.wp-container-core-group-is-layout-56 > * + *,
+.wp-container-core-group-is-layout-57 > * + *,
+.wp-container-core-group-is-layout-60 > * + *,
+.wp-container-core-group-is-layout-74 > * + *,
+.wp-container-core-group-is-layout-75 > * + *,
+.wp-container-core-group-is-layout-78 > * + *,
+.wp-container-core-group-is-layout-92 > * + *,
+.wp-container-core-group-is-layout-93 > * + *,
+.wp-container-core-group-is-layout-96 > * + *,
+.wp-container-core-group-is-layout-110 > * + *,
+.wp-container-core-group-is-layout-111 > * + *,
+.wp-container-core-group-is-layout-114 > * + *,
+.wp-container-core-group-is-layout-128 > * + *,
+.wp-container-core-group-is-layout-129 > * + *,
+.wp-container-core-group-is-layout-132 > * + *,
+.wp-container-core-group-is-layout-144 > * + * {
+
+}
+
+
+@media (max-width: 768px) {
+    section,
+    .ed-cta.layout-2 {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .ed-slider .ed-slide div .ed-slider-info h2,
+    .ed-slider .lSSlideOuter ul.lSPager {
+        font-size: 28px;
+    }
+    .ed-slider .ed-slide div .ed-slider-info h2 {
+        font-size: 28px;
+    }
+}
+
+.menu-modal.active {
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+}
+.menu-modal .sparkle-tabs button.active {
+    display: none;
+}
+
+.ed-courses .ed-text-holder {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px solid #004A8D;
+}
+
+.ed-button:hover {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+}
+
+.widget-area .widget .widget-title,
+.widget-area .widget .wp-block-heading {
+    font-size: 22px;
+    color: #222;
+    border-bottom-width: 1px;
+}
+.widget-area .widget .widget-title:before,
+.widget-area .widget .wp-block-heading:before {
+    bottom: -1px;
+    border-bottom-width: 2px;
+    width: 60px;
+}
+
+.widget_archive a,
+.widget_categories a,
+.widget_recent_entries a,
+.widget_meta a,
+.widget_recent_comments li,
+.widget_rss li,
+.widget_pages li,
+.widget_nav_menu li,
+.widget_product_categories a,
+.widget_archive a::before,
+.widget_categories a::before,
+.widget_recent_entries a::before,
+.widget_meta a::before,
+.widget_recent_comments li::before,
+.widget_rss li:before,
+.widget_pages li:before,
+.widget_nav_menu li:before,
+.widget_product_categories a:before {
+    transition: all 0.2s ease-in-out;
+}
+.widget_archive a:hover,
+.widget_categories a:hover,
+.widget_recent_entries a:hover,
+.widget_meta a:hover,
+.widget_product_categories a:hover,
+.widget_recent_comments a:hover {
+    color: #004A8D;
+    padding-left: 25px;
+}
+.widget_archive a:hover::before,
+.widget_categories a:hover::before,
+.widget_recent_entries a:hover::before,
+.widget_meta a:hover::before,
+.widget_product_categories a:hover::before,
+.widget_recent_comments a:hover::before,
+.widget_rss li:hover::before,
+.widget_pages li:hover::before,
+.widget_nav_menu li:hover::before {
+    color: #004A8D;
+}
+
