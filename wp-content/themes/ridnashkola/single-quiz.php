@@ -5,13 +5,15 @@
  */
 get_header();
 ?>
+    <div class="content clearfix">
 
-    <div class="wrap">
-        <div class="content-area">
-            <main id="main" class="site-main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
+        <div class="container">
+
+            <div id="primary" class="content-area primary-section-quiz">
+                <main id="main" class="site-main">
+                    <section class="ed-blog">
+                        <div class="wrap">
+                            <div class="ed-blog-wrap layout-2">
                             <?php
                             if ( have_posts() ) :?>
 
@@ -20,7 +22,11 @@ get_header();
                                     the_post();
 
                                     get_template_part( 'template-parts/post/content', 'single' );
-
+                                    ?>
+                                   <div class="quiz-title">
+                                       <?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
+                                   </div>
+                                <?php
                                     // get wordwall url
                                     $wordwall_url = get_post_meta( get_the_ID(), 'wordwall_link', true );
 
@@ -43,26 +49,20 @@ get_header();
                                 endwhile;?>
                                 <?php
 
-                                the_post_navigation(
-                                    array(
-                                        /* translators: Hidden accessibility text. */
-                                        'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'kidsworld' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'kidsworld' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>%title</span>',
-                                        /* translators: Hidden accessibility text. */
-                                        'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'kidsworld' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'kidsworld' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></span>',
-                                    )
-                                );
-
+                                the_post_navigation();
                             else :
 
                                 get_template_part( 'template-parts/post/content', 'none' );
 
                             endif;
                             ?>
+                            </div>
                         </div>
-                    </div><!-- .row -->
-                </div><!-- .container -->
-            </main><!-- #main -->
-        </div><!-- .content -->
-    </div><!-- .wrap -->
-<?php
-get_footer();
+                    </section>
+                </main><!-- #main -->
+            </div><!-- #primary -->
+
+        </div>
+    </div>
+
+<?php get_footer();

@@ -188,6 +188,26 @@ Canceling animation for current page
     .main-menu > li:nth-last-child(-n+2) > a span {
         margin-right: 3px;
     }
+
+    .modal-menu .lang-item {
+       width: 49%;
+        margin-top: var(--wp--preset--spacing--20);
+       display: inline-block;
+    }
+
+    .modal-menu > .lang-item ~ .lang-item{
+        border-left: 1px solid rgba(129,129,129,.2);
+    }
+    .modal-menu .lang-item a {
+        border: none;
+        transform: scale(1.5);
+        justify-content: center;
+    }
+}
+
+/* centering logo */
+.brandinglogo-wrap {
+    align-content: center;
 }
 
 /*
@@ -250,6 +270,65 @@ TODO: add custom classes in page editor to remove the need for !important
 .quizzes-grid {
     max-width: 65%;
 }
+
+.nav-links div {
+    padding: var(--wp--preset--spacing--60);
+}
+
+.blog-spacer {
+    margin-top: var(--wp--preset--spacing--50);
+}
+
+.wp-block-gallery img {
+    transition: 0.1s ease-in-out;
+}
+
+.wp-block-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+
+figure.wp-block-gallery.has-nested-images {
+    gap: var(--wp--preset--spacing--50, 1rem);
+}
+
+.wp-block-gallery.has-nested-images.aligncenter {
+    justify-content: center;
+}
+
+/* Specific gallery instance gap override */
+.wp-block-gallery.wp-block-gallery-8 {
+    --wp--style--unstable-gallery-gap: var(--wp--preset--spacing--80, 3rem);
+    gap: var(--wp--style--unstable-gallery-gap);
+}
+
+@media (max-width: 768px) {
+    figure.wp-block-gallery.has-nested-images {
+        gap: var(--wp--preset--spacing--20, 0.75rem); /* Smaller gap */
+    }
+
+    /* Adjust specific gallery gap */
+    .wp-block-gallery.wp-block-gallery-8 {
+        --wp--style--unstable-gallery-gap: var(--wp--preset--spacing--60, 2rem); /* Medium gap */
+        gap: var(--wp--style--unstable-gallery-gap);
+    }
+    .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+       max-width: 90%; // Example: use percentage
+    }
+}
+
+@media (max-width: 480px) {
+    figure.wp-block-gallery.has-nested-images {
+        gap: var(--wp--preset--spacing--10, 0.5rem);
+    }
+
+    .wp-block-gallery.wp-block-gallery-8 {
+        --wp--style--unstable-gallery-gap: var(--wp--preset--spacing--40, 1rem);
+        gap: var(--wp--style--unstable-gallery-gap);
+    }
+}
 /*
  4. footer
  */
@@ -300,48 +379,57 @@ footer p {
     margin-bottom: 20px;
 }
 
+.primary-section-quiz {
+    width: 100%;
+}
+
+.quiz-title h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.quiz-title h3 a {
+    color: #333;
+}
+
+.quiz-title h3 a:hover {
+    color: #004A8D;
+}
+
+.quiz-title h3:before {
+    position: absolute;
+    content: '';
+    background: #004A8D;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    margin: 0 auto;
+}
+
+.quiz-title h3:hover:before {
+    width: 100%;
+}
+
+.quiz-title {
+    display: flex;
+    justify-content: center;
+}
+.quiz-title h3 {
+
+}
+
+
+
 
 /* DEFAULT OVERRIDES */
-.wp-container-core-group-is-layout-1 > * + *,
-.wp-container-core-group-is-layout-19 > * + *,
-.wp-container-core-group-is-layout-37 > * + *,
-.wp-container-core-group-is-layout-55 > * + *,
-.wp-container-core-group-is-layout-73 > * + *,
-.wp-container-core-group-is-layout-91 > * + *,
-.wp-container-core-group-is-layout-109 > * + *,
-.wp-container-core-group-is-layout-127 > * + * {
-    margin-block-start: var(--wp--preset--spacing--40, 1.5rem); /* Use theme variable, fallback to 1.5rem (approx 24px) */
-}
-
-.wp-container-core-group-is-layout-2 > * + *,
-.wp-container-core-group-is-layout-3 > * + *,
-.wp-container-core-group-is-layout-6 > * + *,
-.wp-container-core-group-is-layout-20 > * + *,
-.wp-container-core-group-is-layout-21 > * + *,
-.wp-container-core-group-is-layout-24 > * + *,
-.wp-container-core-group-is-layout-38 > * + *,
-.wp-container-core-group-is-layout-39 > * + *,
-.wp-container-core-group-is-layout-42 > * + *,
-.wp-container-core-group-is-layout-56 > * + *,
-.wp-container-core-group-is-layout-57 > * + *,
-.wp-container-core-group-is-layout-60 > * + *,
-.wp-container-core-group-is-layout-74 > * + *,
-.wp-container-core-group-is-layout-75 > * + *,
-.wp-container-core-group-is-layout-78 > * + *,
-.wp-container-core-group-is-layout-92 > * + *,
-.wp-container-core-group-is-layout-93 > * + *,
-.wp-container-core-group-is-layout-96 > * + *,
-.wp-container-core-group-is-layout-110 > * + *,
-.wp-container-core-group-is-layout-111 > * + *,
-.wp-container-core-group-is-layout-114 > * + *,
-.wp-container-core-group-is-layout-128 > * + *,
-.wp-container-core-group-is-layout-129 > * + *,
-.wp-container-core-group-is-layout-132 > * + *,
-.wp-container-core-group-is-layout-144 > * + * {
-
-}
-
-
 @media (max-width: 768px) {
     section,
     .ed-cta.layout-2 {

@@ -122,5 +122,58 @@ function my_theme_add_wordwall_oembed_provider()
 
 add_action('init', 'my_theme_add_wordwall_oembed_provider');
 
-?>
+
+if ( ! function_exists( 'educenter_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function educenter_posted_on( $author = 'enable', $post_date = 'enable') {
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+        $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+    }
+
+    $time_string = sprintf( $time_string,
+        esc_attr( get_the_date( 'c' ) ),
+        esc_html( get_the_date() ),
+        esc_attr( get_the_modified_date( 'c' ) ),
+        esc_html( get_the_modified_date() )
+    );
+
+    $author_link_html = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+
+    if ( get_locale() === 'uk' ) {
+        $byline_format = 'Автор: %s';
+        $byline = sprintf( $byline_format, $author_link_html );
+
+        $posted_on = sprintf(
+        /* translators: %s: post date. */
+            esc_html_x( 'Опубліковано: %s', 'post date', 'educenter' ),
+            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+        );
+
+    } else {
+        $byline_format = esc_html_x( 'By %s', 'post author', 'educenter' );
+        $byline = sprintf( $byline_format, $author_link_html );
+
+        $posted_on = sprintf(
+        /* translators: %s: post date. */
+            esc_html_x( 'On %s', 'post date', 'educenter' ),
+            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+        );
+
+    }
+
+    if( $author == 'enable' ){
+        echo '<div class="ed-author">
+					<span class="byline"> ' . $byline . '</span>
+				</div>'; // WPCS: XSS OK - $byline contains pre-escaped HTML via esc_url/esc_html within $author_link_html.
+    }
+
+    if( $post_date == 'enable' ){
+        echo '<div class="ed-date"><span class="posted-on">' . $posted_on . '</span></div>'; // WPCS: XSS OK - $posted_on contains pre-escaped HTML.
+    }
+}
+endif;
+
 
