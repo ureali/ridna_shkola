@@ -67,15 +67,54 @@ a:hover {
     color: #003366;
 }
 
+
 /*
 2. header
  */
+.general-header .top-header ul li a i {
+    color: #0056b3;
+}
+
+.general-header .top-header .right-contact li a i {
+    color: #fff;
+}
+
+
+.general-header .top-header .contact-info ul li a {
+    color: #0056b3;
+    position: relative;
+}
+
+.general-header .top-header .contact-info ul li a:hover {
+    color: #0056b3;
+}
+
+.general-header .top-header .contact-info ul li a:after {
+    content: "";
+    background-color: #FFD800;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+
+.general-header .top-header .contact-info ul li a:hover:after{ width: 100%; }
+
 .bottom-header {
-    background-color: #FFD800 ;
+    background-color: var(--wp--preset--color--primary);
+    border-bottom: 15px solid #FFD800;
+}
+
+header .header-middle-inner .box-header-nav .main-menu > .menu-item:not(.current-menu-item) > a:hover {
+    color: #eae8e8;
 }
 
 .site-title a {
-    color: black;
+    color: #fff;
     transition: 0.1s ease-in-out;
 }
 
@@ -92,12 +131,12 @@ a:hover {
 }
 
 header .header-middle-inner .box-header-nav .main-menu > .menu-item:not(.current-menu-item) > a:hover {
-    color: var(--wp--preset-color--primary) !important;
+    color: #003366;
 }
 
 .main-menu li a:after {
     content: "";
-    background-color: var(--wp--preset--color--primary);
+    background-color: #FFD800;
     height: 3px;
     left: 0;
     bottom: 0.8rem;
@@ -114,14 +153,7 @@ header .header-middle-inner .box-header-nav .main-menu > .menu-item:not(.current
 Canceling animation for current page
  */
 .header-middle-inner .box-header-nav .main-menu > .menu-item.current-menu-item > a:after {
-    width: 0;
-}
-.header-middle-inner .box-header-nav .main-menu > .menu-item.current-menu-item .header-middle-inner .box-header-nav .main-menu > .menu-item:hover{
-    background-color: var(--wp--preset--color--primary);
-}
-
-.header-middle-inner .box-header-nav .main-menu > .menu-item.current-menu-item > a {
-    background-color: var(--wp--preset--color--primary) !important;
+    width: 100%;
 }
 
 
@@ -153,7 +185,7 @@ Canceling animation for current page
 .main-menu > li:nth-last-child(-n+2) > a:hover {
     background-color: rgba(0, 0, 0, 0.05);
     transform: translateY(-2px);
-    color: #333;
+    color: #eae8e8;
 }
 
 .main-menu > li:nth-last-child(-n+2) > a:after {
