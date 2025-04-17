@@ -340,7 +340,6 @@ figure.wp-block-gallery.has-nested-images {
     justify-content: center;
 }
 
-/* Specific gallery instance gap override */
 .wp-block-gallery.wp-block-gallery-8 {
     --wp--style--unstable-gallery-gap: var(--wp--preset--spacing--80, 3rem);
     gap: var(--wp--style--unstable-gallery-gap);
@@ -348,16 +347,12 @@ figure.wp-block-gallery.has-nested-images {
 
 @media (max-width: 768px) {
     figure.wp-block-gallery.has-nested-images {
-        gap: var(--wp--preset--spacing--20, 0.75rem); /* Smaller gap */
+        gap: var(--wp--preset--spacing--20, 0.75rem);
     }
 
-    /* Adjust specific gallery gap */
-    .wp-block-gallery.wp-block-gallery-8 {
-        --wp--style--unstable-gallery-gap: var(--wp--preset--spacing--60, 2rem); /* Medium gap */
+        .wp-block-gallery.wp-block-gallery-8 {
+            --wp--style--unstable-gallery-gap: var(--wp--preset--spacing--60, 2rem);
         gap: var(--wp--style--unstable-gallery-gap);
-    }
-    .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-       max-width: 90%; // Example: use percentage
     }
 }
 

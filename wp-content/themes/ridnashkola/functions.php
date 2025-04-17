@@ -176,4 +176,103 @@ function educenter_posted_on( $author = 'enable', $post_date = 'enable') {
 }
 endif;
 
+function educenter_add_breadcrumb() {
 
+    // Bail if home page.
+    if ( is_front_page() || is_home() ) {
+        return;
+    }  ?>
+
+    <div class="ed-breadcrumb">
+        <div class="ed-overlay"></div>
+        <div class="container">
+            <div class="breadcrumb-list">
+                <h2 class="ed-header-title">
+                    <?php
+                    if ( is_category() || is_archive() ) {
+                        the_archive_title( '<span>', '</span>' );
+
+                    } elseif ( is_search() ) {
+
+                        /* translators: %s: search query. */
+                        if ( get_locale() === 'uk' ) {
+                            printf(
+                                'Результати пошуку за запитом: %s',
+                                '<span>' . esc_html( get_search_query() ) . '</span>'
+                            );
+                        } else {
+                            printf(
+                                esc_html__( 'Search Results for: %s', 'educenter' ),
+                                '<span>' . esc_html( get_search_query() ) . '</span>'
+                            );
+                        }
+
+                    } elseif ( is_404() ) {
+
+                        if ( get_locale() === 'uk' ) {
+                            echo 'Сторінка помилки';
+                        } else {
+                            esc_html_e( 'Error Page', 'educenter' );
+                        }
+
+                    } else {
+
+                        the_title();
+
+                    }
+                    ?>
+                </h2>
+                <div id="breadcrumb" class="bread-list">
+                    <?php educenter_breadcrumb(); ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <?php
+}
+add_action( 'educenter_add_breadcrumb', 'educenter_add_breadcrumb', 10 );
+function my_breadcrumb_trail_labels_uk( $labels ) {
+    if ( get_locale() === 'uk' ) {
+        $labels['home']      = 'Головна';                                      // Home
+        $labels['browse']    = 'Перегляд:';                                    // Browse:
+        $labels['search']    = 'Результати пошуку за запитом: %s';              // Search results for: %s
+        $labels['error_404'] = '404 Не знайдено';                               // 404 Not Found
+    }
+    return $labels;
+}
+add_filter( 'breadcrumb_trail_labels', 'my_breadcrumb_trail_labels_uk' );
+
+/**
+ * Translate default block‑widget titles into Ukrainian.
+ */
+function educenter_translate_widget_headings_uk( $widget_block ) {
+    if ( get_locale() !== 'uk' || ! is_array( $widget_block ) ) {
+        return $widget_block;
+    }
+
+    // Map English → Ukrainian labels:
+    $translations = array(
+        'Recent Posts'    => 'Останні записи',
+        'Recent Comments' => 'Останні коментарі',
+        'Archives'        => 'Архіви',
+        'Categories'      => 'Категорії',
+    );
+
+    foreach ( $widget_block as $id => $widget ) {
+        if ( isset( $widget['content'] ) ) {
+            foreach ( $translations as $en => $uk ) {
+                $widget['content'] = str_replace(
+                    "<!-- wp:heading --><h2>{$en}</h2><!-- /wp:heading -->",
+                    "<!-- wp:heading --><h2>{$uk}</h2><!-- /wp:heading -->",
+                    $widget['content']
+                );
+            }
+            $widget_block[ $id ]['content'] = $widget['content'];
+        }
+    }
+
+    return $widget_block;
+}
+add_filter( 'option_widget_block', 'educenter_translate_widget_headings_uk' );
