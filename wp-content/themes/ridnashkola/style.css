@@ -3,7 +3,7 @@ Theme Name: Ridna Shkola
 Theme URI: http://example.com/educenter-child
 Description: A child theme for the Educenter theme.
 Author: Web Project Team
-Author URI: http://example.com
+Author URI: https://www.scweb.ca/
 Template: educenter
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -11,7 +11,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: educenter-child
 */
 
-/* typography */
+/* Table of contents
+    0. Typography
+    1. Body
+    2. Header
+    3. Main Content Area
+    4. Footer
+    5. Quiz Styles
+    *. DEFAULT OVERRIDES (Parent Theme/Core Style Adjustments)
+ */
+
+/* 0. typography */
 body,
 button,
 input,
@@ -393,7 +403,7 @@ footer p {
     color: #fff;
 }
 
-/* Quiz styles */
+/* 5. Quiz styles */
 .wordwall-embed-container {
     margin: var(--wp--preset--spacing--60) auto;
     width: fit-content;
