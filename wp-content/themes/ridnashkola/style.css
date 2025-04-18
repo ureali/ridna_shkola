@@ -290,14 +290,23 @@ TODO: add custom classes in page editor to remove the need for !important
     gap: 0;
 }
 
+.wp-block-image {
+    max-width: 80vw;
+}
+
 .contact-block {
-    border: 3px #FFD800 solid;
+    border-bottom: 3px #FFD800 solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     min-height: 100%;
     flex: 1;
     width: 30%;
+    transition: 0.1s ease-in-out;
     padding: var(--wp--preset--spacing--40);
 }
 
+.contact-block:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
 @media screen and (max-width: 1028px){
     .contact-block {
         width: 100%;
@@ -345,6 +354,11 @@ figure.wp-block-gallery.has-nested-images {
     gap: var(--wp--style--unstable-gallery-gap);
 }
 
+@media (max-width: 968px) {
+    .wp-block-gallery {
+        max-width: 90vw;
+    }
+}
 @media (max-width: 768px) {
     figure.wp-block-gallery.has-nested-images {
         gap: var(--wp--preset--spacing--20, 0.75rem);
